@@ -23,7 +23,8 @@ function draw()
     background(46,139,87);
     if (keyWentDown(UP_ARROW))
     {
-      writeStock(foodS);
+      FoodS--
+      writeStock(FoodS);
       dog.addImage(happyDogImage);
     }
     drawSprites();
@@ -31,11 +32,12 @@ function draw()
     fill("white");
     stroke("white");
     text("Note: Press UP_ARROW Key To Feed The Dog Milk!", 400, 100);
+    text("Fooooooood " + FoodS, 400, 650)
 }
 
 function readStock(data)
 {
-  foodS = data.val();
+  FoodS = data.val();
 }
 
 function writeStock(x)
